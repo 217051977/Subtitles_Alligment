@@ -2,13 +2,14 @@ import Managers.DirectoryManager;
 import Managers.SubtitlesManager;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
     private static final SubtitlesManager subtitlesManager = new SubtitlesManager();
     private static final DirectoryManager directoryManager = new DirectoryManager();
 
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) throws IOException {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Set drive: ");
         String drive = scanner.nextLine();
@@ -24,8 +25,11 @@ public class Main {
         int m = scanner.nextInt();
         System.out.print("Seconds: ");
         int s = scanner.nextInt();
+        scanner.close();
 
-        subtitlesManager.getFile(drive, path, name);
+        subtitlesManager.getFile(drive, path, name + ".srt");
+//        subtitlesManager.readFile();
+//        subtitlesManager.printTimeLines();
 //        subtitlesManager.UpdateFile(h, m, s);
         System.out.println(subtitlesManager.UpdateFile(h, m, s));
     }
