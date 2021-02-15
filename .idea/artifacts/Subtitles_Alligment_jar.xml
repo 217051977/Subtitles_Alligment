@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="Subtitles_Alligment:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Subtitles_Alligment_jar</output-path>
+    <root id="archive" name="Subtitles_Alligment.jar">
+      <element id="module-output" name="Subtitles_Alligment" />
+    </root>
+  </artifact>
+</component>
